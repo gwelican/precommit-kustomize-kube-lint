@@ -1,0 +1,6 @@
+- id: kube-linter
+  name: KubeLinter
+  description: Renders kustomize files and runs kube-linter on them
+  entry: hooks/render-kustomize.sh
+  language: script
+  types: [yaml]

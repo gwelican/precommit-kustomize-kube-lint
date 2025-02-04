@@ -24,7 +24,7 @@ for dir in $changed_dirs; do
             echo "Running kube-linter on rendered manifests..."
 
             # Run kube-linter and store output, but use its exit code
-            if ! ~/bin/kube-linter lint "$temp_file" --format=plain >> $results; then
+            if ! kube-linter lint "$temp_file" --format=plain >> $results; then
                 echo "Linting issues found. Check results/kube-linter.txt for details."
                 cat $results
                 rm "$temp_file"
